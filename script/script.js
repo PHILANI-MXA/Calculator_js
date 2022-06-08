@@ -61,15 +61,15 @@ keys.addEventListener('click', e => {
                 previousKeyType !== 'calculate') {
                 const calcValue = calculate(firstValue, operator, secondValue);
                 display.textContent = calcValue;
-                // Update calculated value as firstValue
+
                 calculator.dataset.firstValue = calcValue;
             } else {
-                // If there are no calculations, set displayedNum as the firstValue
+
                 calculator.dataset.firstValue = displayedNum;
             }
 
             key.classList.add('is-depressed');
-            // Add custom attribute
+
             calculator.dataset.previousKeyType = 'operator';
             calculator.dataset.firstValue = displayedNum;
             calculator.dataset.operator = action;
@@ -114,7 +114,7 @@ keys.addEventListener('click', e => {
                 }
                 display.textContent = calculate(firstValue, operator, secondValue);
             }
-            // Set modValue attribute
+
             calculator.dataset.modValue = secondValue;
             calculator.dataset.previousKeyType = 'calculate';
         }
